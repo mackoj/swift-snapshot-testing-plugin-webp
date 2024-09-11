@@ -1,0 +1,42 @@
+{
+  "originHash" : "21692f7aa4302062ff0e2650757eb13903691222c3111dbc26973816c5487f79",
+  "pins" : [
+    {
+      "identity" : "libwebp-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/awxkee/libwebp-ios.git",
+      "state" : {
+        "revision" : "09ab26afc64c55a49332c396c4b465c278fcb05f",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mackoj/swift-snapshot-testing.git",
+      "state" : {
+        "branch" : "54c11f6",
+        "revision" : "54c11f6eecc7fc61c71f265e807ead8ce7de379b"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax",
+      "state" : {
+        "revision" : "515f79b522918f83483068d99c68daeb5116342d",
+        "version" : "600.0.0-prerelease-2024-09-04"
+      }
+    },
+    {
+      "identity" : "webp.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/awxkee/webp.swift.git",
+      "state" : {
+        "revision" : "5ee6b41965c161b3adbe29f6c01a2b66b4944867",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
