@@ -1,6 +1,6 @@
 # swift-snapshot-testing-plugin-webp
 
-This repo is an experimental use of this branch([mackoj:feat/imageSerializer](https://github.com/mackoj/swift-snapshot-testing/tree/feat/imageSerializer)) that contains a PluginAPI for `swift-snapshot-testing`.
+This repo is an experimental use of this branch(https://github.com/pointfreeco/swift-snapshot-testing/pull/904) that contains a PluginAPI for `swift-snapshot-testing`.
 
 The goal of this is to show how easy it is to build a plugin.
 
