@@ -6,14 +6,41 @@ The goal of this is to show how easy it is to build a plugin.
 
 ## Usage
 
-- Add this project to dependencies inside your `Package.swift`  -> `.package(url: "https://github.com/mackoj/swift-snapshot-testing-plugin-webp.git", revision: "0.0.1"),`.
-- Then add this to your test target `.product(name: "WEBPImageSerializer", package: "swift-snapshot-testing-plugin-webp"),`.
-- Then add this to the top of your test file `import WEBPImageSerializer` and in the `setUp()` add this `SnapshotTesting.imageFormat = WEBPImageSerializer.imageFormat`.
+To utilize the WEBP image serializer in your tests, follow these steps:
+
+1. **Add the Dependency**: Include this project as a dependency in your `Package.swift` file:
+
+    ```swift
+    .package(url: "https://github.com/mackoj/swift-snapshot-testing-plugin-webp.git", revision: "0.0.1"),
+    ```
+
+2. **Link to Your Test Target**: Add the WEBPImageSerializer to your test target's dependencies:
+
+    ```swift
+    .product(name: "WEBPImageSerializer", package: "swift-snapshot-testing-plugin-webp"),
+    ```
+
+3. **Import and Set Up**: In your test file, import the serializer and set the image format in the `setUp()` method:
+
+    ```swift
+    import WEBPImageSerializer
+
+    override class func setUp() {
+        SnapshotTesting.imageFormat = WEBPImageSerializer.imageFormat
+    }
+    ```
+
+4. **Per Assertion**: Alternatively, specify the image format for individual assertions: 
+
+    ```swift
+    assertSnapshot(of: label, as: .image(precision: 0.9, format: .webp))
+    ```
 
 ## TODO
 
-- [ ] use [libjxl](https://github.com/libjxl/libjxl) instead of [JXLCoder]([url](https://github.com/awxkee/jxl-coder-swift.git)).
+- [ ] use [webp](https://github.com/webmproject/libwebp) directly
 - [ ] make the API ready for Swift 6 and async/throwing functions
 - [ ] create a tests suite
 - [ ] add documentations
 - [ ] add tutorials
+
