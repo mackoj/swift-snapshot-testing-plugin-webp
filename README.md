@@ -41,6 +41,6 @@ To utilize the WEBP image serializer in your tests, follow these steps:
 - [ ] use [webp](https://github.com/webmproject/libwebp) directly
 - [ ] make the API ready for Swift 6 and async/throwing functions
 - [ ] create a tests suite
-- [ ] add documentations
+- [x] add documentations
 - [ ] add tutorials
 
