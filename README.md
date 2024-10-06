@@ -40,8 +40,8 @@ To utilize the WEBP image serializer in your tests, follow these steps:
     import HEICImageSerializer
 
     override class func setUp() {
-        SnapshotTesting.imageFormat = HEICImageSerializer.imageFormat
-        PluginRegistry.registerPlugin(HEICImageSerializer.init())
+        SnapshotTesting.imageFormat = WEBPImageSerializer.imageFormat
+        PluginRegistry.registerPlugin(WEBPImageSerializer.init())
     }
 ```
 
