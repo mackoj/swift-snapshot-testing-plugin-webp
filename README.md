@@ -25,19 +25,25 @@ To utilize the WEBP image serializer in your tests, follow these steps:
 
 3. **Import and Set Up**: In your test file, import the serializer and set the image format in the `setUp()` method:
 
-    ```swift
+```swift
     import WEBPImageSerializer
 
     override class func setUp() {
         SnapshotTesting.imageFormat = WEBPImageSerializer.imageFormat
     }
-    ```
+```
 
-4. **Per Assertion**: Alternatively, specify the image format for individual assertions: 
+> [!IMPORTANT]  
+> On non Apple platform use this instead.
 
-    ```swift
-    assertSnapshot(of: label, as: .image(precision: 0.9, format: .webp))
-    ```
+```swift
+    import HEICImageSerializer
+
+    override class func setUp() {
+        SnapshotTesting.imageFormat = HEICImageSerializer.imageFormat
+        PluginRegistry.registerPlugin(HEICImageSerializer.init())
+    }
+```
 
 ## TODO
 
